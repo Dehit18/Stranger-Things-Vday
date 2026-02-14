@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Happy Valentine's Day, Vanu 🐱❤️</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Special+Elite&family=Cinzel+Decorative:wght@700;900&family=Press+Start+2P&display=swap');
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--red:#d4102e;--glow:#ff1a3a;--purple:#9b59b6;--green:#00ff41}
+html,body{width:100%;min-height:100vh;background:#000;color:#e8e0d8;font-family:'Libre Baskerville',Georgia,serif;overflow-x:hidden;-webkit-tap-highlight-color:transparent;user-select:none}
+.crt{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9000;background:repeating-linear-gradient(0deg,transparent 0px,transparent 2px,rgba(0,0,0,0.03) 2px,rgba(0,0,0,0.03) 4px)}
+.vhs{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:8999;opacity:0;background:rgba(255,255,255,0.05)}.vhs.on{animation:vf .3s}
+@keyframes vf{0%{opacity:0}30%{opacity:.12}60%{opacity:0}80%{opacity:.06}100%{opacity:0}}
+.spores{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:3;overflow:hidden}
+.sp{position:absolute;border-radius:50%;background:rgba(255,230,200,.25);box-shadow:0 0 4px rgba(255,200,150,.15);animation:sf linear infinite}
+@keyframes sf{0%{transform:translateY(110vh) translateX(0) rotate(0);opacity:0}8%{opacity:.8}92%{opacity:.6}100%{transform:translateY(-30px) translateX(var(--dx)) rotate(var(--rot));opacity:0}}
+.vines{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:4;box-shadow:inset 0 0 80px rgba(20,5,5,.9),inset 0 0 200px rgba(10,0,0,.5)}
+.scene{display:none;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;padding:20px;position:relative;z-index:10;opacity:0;transition:opacity .8s}
+.scene.active{display:flex}.scene.visible{opacity:1}
+.st-t{font-family:'Cinzel Decorative',serif;font-weight:900;color:var(--red);text-transform:uppercase;letter-spacing:6px;line-height:1.15;text-shadow:0 0 10px rgba(212,16,46,.8),0 0 30px rgba(212,16,46,.4),0 0 60px rgba(212,16,46,.2),0 0 100px rgba(212,16,46,.1);position:relative}
+.st-t::before,.st-t::after{content:'';display:block;height:1px;background:linear-gradient(90deg,transparent,var(--red),transparent);margin:12px auto;width:80%;box-shadow:0 0 10px var(--red)}
+.btn{background:0;border:1.5px solid var(--red);color:var(--red);font-family:'Libre Baskerville',serif;font-size:15px;padding:14px 36px;letter-spacing:3px;text-transform:uppercase;cursor:pointer;position:relative;overflow:hidden;transition:all .4s}
+.btn:hover,.btn:active{background:var(--red);color:#fff;box-shadow:0 0 40px rgba(212,16,46,.4)}
+.btn::after{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.06),transparent);animation:sh 4s infinite}
+@keyframes sh{100%{left:100%}}
+.btn-p{border-color:var(--purple);color:var(--purple)}.btn-p:hover,.btn-p:active{background:var(--purple);color:#fff;box-shadow:0 0 40px rgba(155,89,182,.4)}
+@keyframes cb{0%,100%{transform:translateY(0) rotate(0)}25%{transform:translateY(-8px) rotate(-3deg)}75%{transform:translateY(-4px) rotate(3deg)}}
+
+/* INTRO */
+#s-intro{background:radial-gradient(ellipse at 50% 60%,#1a0505 0%,#050000 50%,#000 100%);text-align:center}
+.i-cats{font-size:56px;margin-bottom:20px;display:flex;gap:20px;justify-content:center}
+.i-cats .cl{animation:pl 3s ease-in-out infinite}.i-cats .cr{animation:pr 3s ease-in-out infinite}
+@keyframes pl{0%,100%{transform:translateX(0) rotate(0)}50%{transform:translateX(8px) rotate(5deg)}}
+@keyframes pr{0%,100%{transform:translateX(0) rotate(0)}50%{transform:translateX(-8px) rotate(-5deg)}}
+.i-title{font-size:clamp(28px,7vw,54px);margin-bottom:8px}
+.i-sub{font-family:'Special Elite',cursive;color:#888;font-size:clamp(13px,3vw,17px);line-height:1.8;margin:20px 0 30px;max-width:400px}
+.i-date{font-family:'Special Elite',cursive;color:rgba(212,16,46,.6);font-size:13px;letter-spacing:4px;margin-bottom:20px}
+
+/* LIGHTS */
+#s-lights{background:radial-gradient(ellipse at 50% 30%,#120808 0%,#050000 60%,#000 100%);padding:25px 10px}
+.wall{width:min(96vw,480px);background:linear-gradient(180deg,#1c1410,#100a06);border-radius:8px;padding:25px 15px;position:relative;overflow:hidden;border:1px solid rgba(80,40,20,.3)}
+.wall::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:repeating-linear-gradient(90deg,transparent 0px,transparent 30px,rgba(60,30,15,.05) 30px,rgba(60,30,15,.05) 31px);pointer-events:none}
+.w-title{font-family:'Special Elite',cursive;color:rgba(255,255,255,.4);font-size:12px;text-align:center;letter-spacing:3px;text-transform:uppercase;margin-bottom:15px}
+.a-row{display:flex;flex-wrap:wrap;justify-content:center;gap:2px;margin-bottom:5px}
+.a-ch{width:clamp(26px,6.8vw,36px);display:flex;flex-direction:column;align-items:center}
+.bulb{width:10px;height:12px;border-radius:0 0 50% 50%;margin-bottom:2px;background:rgba(50,50,50,.3);transition:all .2s;position:relative}
+.bulb::before{content:'';position:absolute;top:-3px;left:50%;transform:translateX(-50%);width:5px;height:4px;background:#444;border-radius:2px 2px 0 0}
+.a-ch .lt{font-family:'Special Elite',cursive;font-size:clamp(16px,4vw,22px);color:rgba(255,255,255,.2);transition:color .3s,text-shadow .3s}
+.a-ch.on .lt{color:#fff;text-shadow:0 0 8px rgba(255,255,255,.5)}
+.a-ch.on .bulb{background:var(--bc);box-shadow:0 0 6px var(--bc),0 0 15px var(--bc),0 0 30px color-mix(in srgb,var(--bc) 50%,transparent)}
+.w-msg{text-align:center;min-height:70px;padding:15px 10px;font-family:'Special Elite',cursive;font-size:clamp(15px,3.8vw,20px);color:var(--red);text-shadow:0 0 10px rgba(212,16,46,.4);line-height:1.6;opacity:0;transition:opacity .6s}.w-msg.sh{opacity:1}
+.w-cat{text-align:center;font-size:32px;margin-top:5px;opacity:.7}
+
+/* WALKIE */
+#s-walkie{background:radial-gradient(ellipse at 50% 40%,#0a0812 0%,#030008 60%,#000 100%)}
+.wk{width:min(82vw,320px)}
+.wk-ant{width:8px;height:55px;background:linear-gradient(90deg,#444,#666,#444);margin:0 auto;border-radius:4px 4px 0 0}
+.wk-body{background:linear-gradient(180deg,#353535,#1e1e1e);border-radius:18px 18px 8px 8px;padding:24px 20px 20px;border:1px solid #444;box-shadow:0 15px 50px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.05)}
+.wk-grille{width:100%;height:70px;background:repeating-linear-gradient(0deg,#252525 0px,#252525 3px,#1a1a1a 3px,#1a1a1a 6px);border-radius:10px;border:1px solid #333;margin-bottom:18px;position:relative;overflow:hidden}
+.wk-grille::after{content:'🐱 Catu FM';position:absolute;bottom:4px;right:8px;font-size:9px;color:rgba(255,255,255,.15);font-family:'Press Start 2P',monospace}
+.wk-disp{background:#071207;border-radius:6px;padding:18px 14px;min-height:150px;max-height:250px;overflow-y:auto;border:1px solid #1a3a1a;font-family:'Special Elite',cursive;font-size:clamp(13px,3.3vw,16px);color:var(--green);line-height:1.9;position:relative;text-shadow:0 0 5px rgba(0,255,65,.3)}
+.wk-disp .scan{position:absolute;left:0;width:100%;height:2px;background:rgba(0,255,65,.1);animation:sd 5s linear infinite}
+@keyframes sd{0%{top:0}100%{top:100%}}
+.wk-cur{display:inline-block;width:8px;height:16px;background:var(--green);animation:bk .8s step-end infinite;vertical-align:middle;margin-left:2px}
+@keyframes bk{0%,100%{opacity:1}50%{opacity:0}}
+.wk-ctrl{display:flex;align-items:center;justify-content:center;gap:20px;margin-top:14px}
+.wk-knob{width:32px;height:32px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#555,#222);border:2px solid #555}
+.wk-led{width:10px;height:10px;border-radius:50%;background:#f00;box-shadow:0 0 8px #f00,0 0 15px rgba(255,0,0,.3);animation:lp 1.8s ease-in-out infinite}
+@keyframes lp{0%,100%{opacity:1}50%{opacity:.3}}
+
+/* TELEKINESIS */
+#s-tk{background:radial-gradient(ellipse at 50% 40%,#120818 0%,#050010 60%,#000 100%);padding:25px 15px}
+.tk-t{font-family:'Cinzel Decorative',serif;font-weight:700;color:var(--purple);font-size:clamp(20px,5.5vw,30px);text-shadow:0 0 15px rgba(155,89,182,.5);text-align:center;margin-bottom:6px;text-transform:uppercase;letter-spacing:3px}
+.tk-h{text-align:center;color:#777;font-size:12px;font-family:'Special Elite',cursive;margin-bottom:20px}
+.tk-g{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;width:min(95vw,420px)}
+.tk-c{aspect-ratio:1;background:rgba(60,20,80,.12);border:1px solid rgba(155,89,182,.15);border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;position:relative;overflow:hidden;transition:all .6s cubic-bezier(.25,.46,.45,.94)}
+.tk-c::before{content:'';position:absolute;top:50%;left:50%;width:0;height:0;background:radial-gradient(circle,rgba(155,89,182,.3),transparent);border-radius:50%;transform:translate(-50%,-50%);transition:width .8s,height .8s}
+.tk-c.rv::before{width:200%;height:200%}
+.tk-c .ci{font-size:clamp(28px,8vw,40px);transition:all .6s;position:relative;z-index:2}
+.tk-c .cm{position:absolute;bottom:0;left:0;right:0;padding:8px 6px;background:rgba(0,0,0,.9);color:#d4a0ff;font-size:clamp(9px,2.3vw,11px);font-family:'Special Elite',cursive;text-align:center;line-height:1.4;transform:translateY(100%);transition:transform .5s;z-index:3}
+.tk-c.rv{border-color:rgba(155,89,182,.5);box-shadow:0 0 25px rgba(155,89,182,.2)}.tk-c.rv .cm{transform:translateY(0)}
+.tk-c.shake{animation:tkv .5s cubic-bezier(.36,.07,.19,.97)}
+@keyframes tkv{10%,90%{transform:translate(-1px,-1px) rotate(-.5deg)}20%,80%{transform:translate(2px,1px) rotate(.5deg)}30%,50%,70%{transform:translate(-2px,-1px) rotate(-1deg)}40%,60%{transform:translate(2px,1px) rotate(1deg)}}
+.tk-cnt{text-align:center;margin-top:15px;font-family:'Special Elite',cursive;color:#888;font-size:13px}.tk-cnt em{color:var(--purple);font-style:normal;font-weight:700}
+.nb{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:200;background:radial-gradient(circle,rgba(155,89,182,.25),transparent 70%);opacity:0;transition:opacity .2s}.nb.on{opacity:1}
+
+/* GAME */
+#s-game{padding:0;background:#000}
+.gw{width:100vw;height:100vh;position:relative;overflow:hidden;touch-action:none;background:linear-gradient(180deg,#0a0000 0%,#150505 70%,#1a0808 100%)}
+.gw::before{content:'';position:absolute;bottom:0;left:0;width:100%;height:120px;background:linear-gradient(0deg,rgba(30,10,10,.9),transparent);z-index:1}
+.gsp{position:absolute;width:2px;height:2px;background:rgba(255,200,150,.3);border-radius:50%;animation:gs linear infinite;pointer-events:none}
+@keyframes gs{0%{transform:translateY(0);opacity:.6}100%{transform:translateY(-100vh);opacity:0}}
+.ghud{position:absolute;top:0;left:0;right:0;padding:12px 16px;display:flex;justify-content:space-between;align-items:center;z-index:50;font-family:'Press Start 2P',monospace;font-size:11px;background:linear-gradient(180deg,rgba(0,0,0,.7),transparent);padding-bottom:25px}
+.gh-h{color:var(--red);text-shadow:0 0 5px var(--red)}.gh-l{color:#fff}.gh-lv{color:#ffaa00;text-shadow:0 0 5px rgba(255,170,0,.4);font-size:9px}
+.gcat{position:absolute;z-index:30;font-size:38px;transition:left .12s ease-out;filter:drop-shadow(0 0 8px rgba(255,255,255,.2))}
+.gent{position:absolute;z-index:20;filter:drop-shadow(0 3px 4px rgba(0,0,0,.6))}
+.gent.gh{font-size:24px}.gent.gd{font-size:34px;filter:drop-shadow(0 0 12px rgba(255,0,0,.4))}.gent.ge{font-size:22px}
+.gov{position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.88);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:60;text-align:center;padding:25px}
+.gov h2{font-family:'Cinzel Decorative',serif;color:var(--red);font-size:clamp(22px,6vw,32px);text-shadow:0 0 15px rgba(212,16,46,.5);margin-bottom:15px;text-transform:uppercase;letter-spacing:2px}
+.gov .gd{font-family:'Special Elite',cursive;color:#999;font-size:13px;line-height:1.8;margin-bottom:5px;max-width:350px}
+.gov .gcp{font-size:50px;margin:15px 0;animation:cb 2s ease-in-out infinite}
+.gov .glg{display:flex;gap:20px;justify-content:center;margin:12px 0 20px;font-size:13px;color:#aaa}
+.gov .glg span{display:flex;align-items:center;gap:5px}
+
+/* FINALE */
+#s-fin{background:#000;min-height:100vh;padding:40px 20px}
+.gv{width:min(90vw,380px);height:280px;position:relative;margin-bottom:30px}
+.gc{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:6px;height:0;background:var(--red);box-shadow:0 0 15px var(--red),0 0 40px var(--red),0 0 80px rgba(212,16,46,.4);border-radius:3px;animation:gr 2.5s ease-out forwards}
+@keyframes gr{0%{height:0;opacity:0}30%{height:40px;opacity:1}100%{height:260px;opacity:1}}
+.gb{position:absolute;top:50%;left:50%;width:2px;background:var(--red);box-shadow:0 0 12px var(--red),0 0 30px rgba(212,16,46,.3);transform-origin:center top;border-radius:1px;height:0;animation:bg 2s ease-out forwards}
+@keyframes bg{0%{height:0;opacity:0}50%{opacity:1}100%{height:var(--bh);opacity:1}}
+.gp{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:150px;height:260px;background:radial-gradient(ellipse,rgba(212,16,46,.2),transparent 70%);animation:gpl 2.5s ease-in-out infinite}
+@keyframes gpl{0%,100%{opacity:.4;transform:translate(-50%,-50%) scale(1)}50%{opacity:.8;transform:translate(-50%,-50%) scale(1.15)}}
+.fb{text-align:center;max-width:550px;opacity:0;transform:translateY(25px)}.fb.sh{animation:ri 1.2s ease-out forwards}
+@keyframes ri{to{opacity:1;transform:translateY(0)}}
+.fb h1{font-family:'Cinzel Decorative',serif;font-weight:900;font-size:clamp(30px,8vw,52px);color:var(--red);text-transform:uppercase;letter-spacing:4px;line-height:1.15;text-shadow:0 0 10px rgba(212,16,46,.7),0 0 30px rgba(212,16,46,.3),0 0 60px rgba(212,16,46,.15);margin-bottom:8px}
+.fb h1::before,.fb h1::after{content:'';display:block;height:1px;background:linear-gradient(90deg,transparent,var(--red),transparent);margin:10px auto;width:60%;box-shadow:0 0 8px var(--red)}
+.fb h2{font-family:'Cinzel Decorative',serif;color:#ff6b7a;font-size:clamp(18px,5vw,28px);text-shadow:0 0 10px rgba(255,107,122,.3);margin-bottom:20px}
+.f-cats{font-size:52px;margin:15px 0;display:flex;justify-content:center;align-items:center;gap:8px}
+.f-hb{color:var(--red);font-size:30px;animation:hp 1.2s ease-in-out infinite}
+@keyframes hp{0%,100%{transform:scale(1)}50%{transform:scale(1.3)}}
+.f-letter{font-family:'Special Elite',cursive;color:#bbb;font-size:clamp(13px,3vw,16px);line-height:2.1;text-align:center;margin:20px 0 25px;padding:0 10px}
+.f-sign{font-family:'Cinzel Decorative',serif;color:var(--red);font-size:clamp(16px,4vw,22px);text-shadow:0 0 10px rgba(212,16,46,.4);letter-spacing:2px}
+.fhf{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:5;overflow:hidden}
+.fh{position:absolute;animation:fu linear infinite;opacity:0}
+@keyframes fu{0%{transform:translateY(110vh) rotate(0);opacity:0}8%{opacity:.7}90%{opacity:.5}100%{transform:translateY(-40px) rotate(360deg);opacity:0}}
+.trans{position:fixed;top:0;left:0;width:100%;height:100%;background:#000;z-index:800;opacity:0;pointer-events:none;transition:opacity .7s}.trans.on{opacity:1;pointer-events:all}
+.abtn{position:fixed;top:12px;right:12px;z-index:9999;background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.15);color:#fff;width:38px;height:38px;border-radius:50%;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center}
+@media(max-width:380px){.a-ch{width:24px}.a-ch .lt{font-size:14px}}
+</style>
+</head>
+<body>
+<div class="crt"></div>
+<div class="vhs" id="vhs"></div>
+<div class="spores" id="spf"></div>
+<div class="vines"></div>
+<div class="trans" id="trans"></div>
+<div class="nb" id="nb"></div>
+<button class="abtn" id="abtn">🔇</button>
+
+<!-- INTRO -->
+<div class="scene active" id="s-intro">
+  <div class="i-date">14 · FEB · 2026</div>
+  <div class="i-cats"><span class="cl">🐱</span><span style="font-size:28px;color:var(--red)">❤️</span><span class="cr">🐱</span></div>
+  <h1 class="st-t i-title">The Upside Down<br>of Love</h1>
+  <p class="i-sub">Vanu the Cat has wandered into the Upside Down...<br>the lights are flickering, the spores are falling,<br>and somewhere in the dark, Catu is searching for her.<br><br>🐾 Help them find each other 🐾</p>
+  <button class="btn" onclick="begin()">Enter the Upside Down</button>
+</div>
+
+<!-- LIGHTS -->
+<div class="scene" id="s-lights">
+  <div class="wall">
+    <div class="w-title">— Joyce's Wall — Catu is sending a message —</div>
+    <div id="awall"></div>
+    <div class="w-msg" id="wmsg"></div>
+    <div class="w-cat">🐱✨</div>
+    <button class="btn" id="lnb" style="display:none;margin:10px auto 0;font-size:13px" onclick="nxtMsg()">Next Message ✨</button>
+    <button class="btn" id="ldb" style="display:none;margin:10px auto 0;font-size:13px" onclick="go('s-walkie')">Continue 📻</button>
+  </div>
+</div>
+
+<!-- WALKIE -->
+<div class="scene" id="s-walkie">
+  <div class="wk">
+    <div class="wk-ant"></div>
+    <div class="wk-body">
+      <div class="wk-grille"></div>
+      <div class="wk-disp" id="wscr"><div class="scan"></div><span id="wtxt"></span><span class="wk-cur" id="wcur" style="display:none"></span></div>
+      <div class="wk-ctrl"><div class="wk-knob"></div><div class="wk-led"></div><div class="wk-knob"></div></div>
+      <div style="text-align:center;margin-top:8px"><span style="font-family:'Press Start 2P',monospace;font-size:7px;color:rgba(255,255,255,.3);letter-spacing:1px">UPSIDE DOWN FM · CH-11</span></div>
+    </div>
+  </div>
+  <button class="btn" id="wtb" style="margin-top:22px;font-size:13px" onclick="startW()">📻 Tune In</button>
+  <button class="btn btn-p" id="wnb" style="margin-top:22px;font-size:13px;display:none" onclick="go('s-tk')">Use Your Powers 🔮</button>
+</div>
+
+<!-- TELEKINESIS -->
+<div class="scene" id="s-tk">
+  <div>
+    <h2 class="tk-t">Eleven's Powers</h2>
+    <p class="tk-h">Vanu, use your mind... tap each object to reveal what's hidden 🐱</p>
+    <div class="tk-g" id="tkg"></div>
+    <div class="tk-cnt">Found: <em id="tkn">0</em> / 6</div>
+    <button class="btn" id="tkdb" style="display:none;margin:15px auto 0;font-size:13px" onclick="go('s-game')">Run from the Demogorgon! 👾</button>
+  </div>
+</div>
+
+<!-- GAME -->
+<div class="scene" id="s-game">
+  <div class="gw" id="gw">
+    <div class="ghud">
+      <div class="gh-h">❤️ <span id="gs">0</span>/10</div>
+      <div class="gh-lv" id="glv"></div>
+      <div class="gh-l" id="gl">😺😺😺</div>
+    </div>
+    <div class="gov" id="gov">
+      <h2>Demogorgon Chase</h2>
+      <div class="gcp">🐱</div>
+      <p class="gd">Catu must dash through the Upside Down!<br>Collect 10 hearts to open the gate back home.</p>
+      <div class="glg"><span>❤️ Collect</span><span>🧇 Eggo boost</span><span>👾 Avoid!</span></div>
+      <button class="btn" onclick="startG()">🐾 Let's Go!</button>
+    </div>
+  </div>
+</div>
+
+<!-- FINALE -->
+<div class="scene" id="s-fin">
+  <div class="fhf" id="fhf"></div>
+  <div class="gv" id="gvis"></div>
+  <div class="fb" id="fb1"><h1>Happy<br>Valentine's<br>Day</h1><h2>Vanu 🐱💕</h2></div>
+  <div class="f-cats fb" id="fb2"><span style="font-size:52px;display:inline-block;animation:cb 2.5s ease-in-out infinite">🐱</span><span class="f-hb">❤️</span><span style="font-size:52px;display:inline-block;animation:cb 2.5s ease-in-out infinite .5s">🐱</span></div>
+  <div class="f-letter fb" id="fb3">
+    My dearest Vanu,<br><br>
+    Even in the Upside Down, where the air is thick<br>
+    and the spores fall like snow,<br>
+    my love for you burns brighter than Joyce's Christmas lights.<br><br>
+    No Demogorgon could keep me away.<br>
+    No Mind Flayer could cloud my heart.<br>
+    Not even Vecna's curse could make me forget you.<br><br>
+    You are my Eleven —<br>
+    the most powerful force in every dimension.<br>
+    You don't need telekinesis to move my heart,<br>
+    because you already own it. Completely. Forever.<br><br>
+    In every timeline, every universe,<br>
+    through every gate and every world —<br>
+    I'd choose you. Always you. Only you.<br><br>
+    Happy Valentine's Day, my love. 🐾💕
+  </div>
+  <div class="f-sign fb" id="fb4">Forever your Catu, Dehit 🐱♥️</div>
+</div>
+
+<script>
+let ac=null,ao=false;const ab=document.getElementById('abtn');
+ab.onclick=()=>{ao=!ao;ab.textContent=ao?'🔊':'🔇';if(!ac)ac=new(window.AudioContext||window.webkitAudioContext)()};
+function tn(f,d=.15,t='sine',v=.06){if(!ao||!ac)return;try{const o=ac.createOscillator(),g=ac.createGain();o.type=t;o.frequency.value=f;g.gain.setValueAtTime(v,ac.currentTime);g.gain.exponentialRampToValueAtTime(.001,ac.currentTime+d);o.connect(g);g.connect(ac.destination);o.start();o.stop(ac.currentTime+d)}catch(e){}}
+function sb(){if(!ao||!ac)return;try{const n=ac.sampleRate*.25,b=ac.createBuffer(1,n,ac.sampleRate),d=b.getChannelData(0);for(let i=0;i<n;i++)d[i]=(Math.random()*2-1)*.03;const s=ac.createBufferSource();s.buffer=b;s.connect(ac.destination);s.start()}catch(e){}}
+function ec(){tn(175,2.5,'sine',.03);setTimeout(()=>tn(220,2.5,'triangle',.02),300);setTimeout(()=>tn(262,2,'sine',.02),600)}
+
+// Spores
+(function(){const f=document.getElementById('spf');for(let i=0;i<60;i++){const s=document.createElement('div');s.className='sp';s.style.left=Math.random()*100+'%';const z=2+Math.random()*3;s.style.width=s.style.height=z+'px';s.style.animationDuration=(10+Math.random()*18)+'s';s.style.animationDelay=(Math.random()*12)+'s';s.style.setProperty('--dx',(Math.random()*80-40)+'px');s.style.setProperty('--rot',(Math.random()*360)+'deg');f.appendChild(s)}})();
+
+function vf(){const v=document.getElementById('vhs');v.classList.add('on');setTimeout(()=>v.classList.remove('on'),350)}
+function go(id){const t=document.getElementById('trans');t.classList.add('on');ec();setTimeout(()=>{document.querySelectorAll('.scene').forEach(s=>{s.classList.remove('active','visible')});const n=document.getElementById(id);n.classList.add('active');window.scrollTo(0,0);setTimeout(()=>{n.classList.add('visible');t.classList.remove('on')},100);if(id==='s-lights')initL();if(id==='s-tk')initTK();if(id==='s-fin')initF()},750)}
+function begin(){if(!ac)ac=new(window.AudioContext||window.webkitAudioContext)();ao=true;ab.textContent='🔊';vf();go('s-lights')}
+setTimeout(()=>document.getElementById('s-intro').classList.add('visible'),200);
+
+// LIGHTS
+const BC=['#ff2020','#20ff40','#ffdd20','#2080ff','#ff20dd','#ff8820','#20ffcc','#ff4060','#60ff20','#ffaa30','#3060ff','#ff20aa','#80ff20','#20ffaa','#ff6020','#20ff80','#ccff20','#2040ff','#ff2070','#70ff20','#20ffdd','#ff7720','#20ff50','#ddff20','#2020ff','#ff2090'];
+const WM=[{t:"VANU I LOVE YOU",e:"😻"},{t:"MY HEART IS YOURS",e:"💝"},{t:"HAPPY VALENTINES",e:"🐱❤️"}];
+let wi=0;
+function initL(){const w=document.getElementById('awall');w.innerHTML='';wi=0;document.getElementById('lnb').style.display='none';document.getElementById('ldb').style.display='none';const a='ABCDEFGHIJKLMNOPQRSTUVWXYZ';const r=document.createElement('div');r.className='a-row';a.split('').forEach((c,i)=>{const d=document.createElement('div');d.className='a-ch';d.dataset.c=c;d.style.setProperty('--bc',BC[i]);d.innerHTML=`<div class="bulb"></div><span class="lt">${c}</span>`;r.appendChild(d)});w.appendChild(r);setTimeout(()=>playM(),600)}
+function playM(){const m=WM[wi],cs=document.querySelectorAll('.a-ch'),dp=document.getElementById('wmsg');cs.forEach(c=>c.classList.remove('on'));dp.classList.remove('sh');dp.textContent='';let i=0,tx=m.t;function nx(){if(i>=tx.length){dp.textContent=m.e+'  '+tx+'  '+m.e;dp.classList.add('sh');wi++;if(wi<WM.length)document.getElementById('lnb').style.display='block';else document.getElementById('ldb').style.display='block';return}const ch=tx[i];if(ch===' '){i++;setTimeout(nx,180);return}const mt=[...cs].find(c=>c.dataset.c===ch);if(mt){cs.forEach(c=>{if(c.dataset.c===ch)c.classList.add('on')});tn(280+i*35,.18,'sine',.05)}i++;setTimeout(nx,220)}setTimeout(nx,400)}
+function nxtMsg(){document.getElementById('lnb').style.display='none';document.querySelectorAll('.a-ch').forEach(c=>c.classList.remove('on'));vf();setTimeout(()=>playM(),400)}
+
+// WALKIE
+const WK=`*kssshh*... Vanu?... Can you hear me?...\n\n*static crackles*...\n\nIt's me... Catu... I'm trapped in the Upside Down...\n\nBut even here, in the cold and the dark,\nwhere the spores fall like snow...\n\nI can still feel your warmth.\nYou're my compass. My North Star. 🌟\n\nThe Demogorgon can't scare me,\nbecause nothing is scarier than\na world without you...\n\nI'm fighting my way back.\nWait for me, Vanu.\n\n*kssshh*... Catu over and out 🐾💕`;
+function startW(){document.getElementById('wtb').style.display='none';const tx=document.getElementById('wtxt'),cu=document.getElementById('wcur');tx.innerHTML='';cu.style.display='inline-block';sb();let i=0;function tp(){if(i>=WK.length){cu.style.display='none';document.getElementById('wnb').style.display='block';return}const c=WK[i];if(c==='\n')tx.innerHTML+='<br>';else tx.innerHTML+=c;if(c==='*')sb();else if(c!==' '&&c!=='\n')tn(350+Math.random()*120,.04,'square',.015);i++;const d=c==='\n'?280:c==='.'?350:c===','?180:c==='*'?80:45;setTimeout(tp,d);document.getElementById('wscr').scrollTop=99999}setTimeout(tp,700)}
+
+// TELEKINESIS
+const TI=[{i:'🌹',n:'A rose for every time you made me smile'},{i:'⭐',n:'You outshine every star in my sky'},{i:'🔮',n:'I see only you in my future, Vanu'},{i:'🐱',n:'This cat belongs to you forever'},{i:'🎵',n:'You are my favorite song on repeat'},{i:'💌',n:'Every love letter I write is about you'}];
+function initTK(){const g=document.getElementById('tkg');g.innerHTML='';document.getElementById('tkn').textContent='0';document.getElementById('tkdb').style.display='none';let ct=0;TI.forEach(it=>{const c=document.createElement('div');c.className='tk-c';c.innerHTML=`<span class="ci">❓</span><div class="cm">${it.n}</div>`;c.onclick=()=>{if(c.classList.contains('rv'))return;c.classList.add('shake');const nb=document.getElementById('nb');nb.classList.add('on');tn(160,.6,'sine',.04);tn(120,.9,'triangle',.03);setTimeout(()=>{nb.classList.remove('on');c.classList.remove('shake');c.classList.add('rv');c.querySelector('.ci').textContent=it.i;ct++;document.getElementById('tkn').textContent=ct;tn(400+ct*70,.3,'sine',.06);vf();if(ct===TI.length)setTimeout(()=>document.getElementById('tkdb').style.display='block',500)},550)};g.appendChild(c)})}
+
+// GAME
+let gA=false,gP,gE=[],gF,gH=0,gLi=3,gX=50;
+function startG(){document.getElementById('gov').style.display='none';const w=document.getElementById('gw');gH=0;gLi=3;gX=50;gE=[];gA=true;document.getElementById('gs').textContent='0';document.getElementById('glv').textContent='';uL();
+w.querySelectorAll('.gcat,.gent,.gsp').forEach(e=>e.remove());
+for(let i=0;i<20;i++){const s=document.createElement('div');s.className='gsp';s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';s.style.animationDuration=(6+Math.random()*10)+'s';s.style.animationDelay=Math.random()*5+'s';w.appendChild(s)}
+gP=document.createElement('div');gP.className='gcat';gP.textContent='🐱';gP.style.bottom='55px';gP.style.left=gX+'%';w.appendChild(gP);
+w.addEventListener('touchstart',gT,{passive:false});w.addEventListener('touchmove',gTM,{passive:false});document.addEventListener('keydown',gK);
+gSL();gGL()}
+function gT(e){if(!gA)return;e.preventDefault();gX=Math.max(3,Math.min(97,(e.touches[0].clientX/window.innerWidth)*100));gP.style.left=gX+'%'}
+function gTM(e){if(!gA)return;e.preventDefault();gX=Math.max(3,Math.min(97,(e.touches[0].clientX/window.innerWidth)*100));gP.style.left=gX+'%'}
+function gK(e){if(!gA)return;if(e.key==='ArrowLeft')gX=Math.max(3,gX-6);if(e.key==='ArrowRight')gX=Math.min(97,gX+6);gP.style.left=gX+'%'}
+function gSL(){if(!gA)return;spE();const r=Math.max(400,900-gH*30);setTimeout(gSL,r+Math.random()*300)}
+function spE(){if(!gA)return;const w=document.getElementById('gw'),r=Math.random();let t,em,cl;if(r<.45){t='h';em='❤️';cl='gh'}else if(r<.58){t='e';em='🧇';cl='ge'}else{t='d';em='👾';cl='gd'}const el=document.createElement('div');el.className='gent '+cl;el.textContent=em;el.style.left=(5+Math.random()*85)+'%';el.style.top='-40px';el.dataset.y=-40;el.dataset.t=t;el.dataset.s=t==='d'?(3+Math.random()):(2.5+Math.random()*1.2);w.appendChild(el);gE.push(el)}
+function uL(){document.getElementById('gl').textContent='😺'.repeat(gLi)+'💀'.repeat(Math.max(0,3-gLi))}
+function gGL(){if(!gA)return;const pr=gP.getBoundingClientRect();for(let i=gE.length-1;i>=0;i--){const e=gE[i];let y=parseFloat(e.dataset.y)+parseFloat(e.dataset.s);e.dataset.y=y;e.style.top=y+'px';const er=e.getBoundingClientRect(),hit=er.top<pr.bottom-5&&er.bottom>pr.top+5&&er.left<pr.right-5&&er.right>pr.left+5;if(hit){if(e.dataset.t==='h'){gH++;document.getElementById('gs').textContent=gH;tn(550,.15,'sine',.07);if(gH===5)document.getElementById('glv').textContent='Halfway! 🐱';if(gH===8)document.getElementById('glv').textContent='Almost home! 💕';e.remove();gE.splice(i,1);if(gH>=10){gW();return}}else if(e.dataset.t==='e'){vf();tn(700,.2,'sine',.06);document.getElementById('glv').textContent='🧇 Eleven sends Eggos!';setTimeout(()=>{if(gA)document.getElementById('glv').textContent=''},1500);e.remove();gE.splice(i,1);gH=Math.min(10,gH+1);document.getElementById('gs').textContent=gH;if(gH>=10){gW();return}}else{gLi--;uL();vf();tn(80,.4,'sawtooth',.1);gP.textContent='🙀';setTimeout(()=>{if(gP)gP.textContent='🐱'},500);e.remove();gE.splice(i,1);if(gLi<=0){gR();return}}continue}if(y>window.innerHeight+50){e.remove();gE.splice(i,1)}}gF=requestAnimationFrame(gGL)}
+function gR(){gA=false;cancelAnimationFrame(gF);gE.forEach(e=>e.remove());gE=[];if(gP)gP.remove();const o=document.getElementById('gov');o.style.display='flex';o.querySelector('h2').textContent='The Demogorgon got you! 👾';o.querySelector('.gd').innerHTML='But Catu never gives up for Vanu...<br>🐱 Cats have 9 lives, remember?';o.querySelector('button').textContent='🐾 Try Again!';o.querySelector('.gcp').textContent='🙀'}
+function gW(){gA=false;cancelAnimationFrame(gF);gE.forEach(e=>e.remove());gE=[];if(gP){gP.textContent='😻';gP.style.fontSize='50px'}document.getElementById('glv').textContent='🐱 ALL HEARTS COLLECTED! 🐱';setTimeout(()=>{if(gP)gP.remove();const o=document.getElementById('gov');o.style.display='flex';o.querySelector('h2').textContent='Catu did it! ❤️';o.querySelector('.gd').innerHTML='All 10 hearts collected for Vanu!<br>Time to close the gate and go home... 🐾';o.querySelector('button').textContent='🌹 Close the Gate';o.querySelector('button').onclick=()=>go('s-fin');o.querySelector('.gcp').textContent='😻'},1200)}
+
+// FINALE
+function initF(){const gv=document.getElementById('gvis');gv.innerHTML='<div class="gp"></div><div class="gc"></div>';for(let i=0;i<9;i++){const b=document.createElement('div');b.className='gb';b.style.transform=`translate(-50%,-50%) rotate(${-60+i*15}deg)`;b.style.setProperty('--bh',(80+Math.random()*120)+'px');b.style.animationDelay=(0.3+i*.15)+'s';gv.appendChild(b)}
+const hf=document.getElementById('fhf');hf.innerHTML='';for(let i=0;i<35;i++){const h=document.createElement('div');h.className='fh';h.textContent=['❤️','💕','💗','🐱','✨','🐾'][Math.floor(Math.random()*6)];h.style.left=Math.random()*100+'%';h.style.fontSize=(14+Math.random()*18)+'px';h.style.animationDuration=(5+Math.random()*5)+'s';h.style.animationDelay=(Math.random()*7)+'s';hf.appendChild(h)}
+['fb1','fb2','fb3','fb4'].forEach((id,i)=>{setTimeout(()=>document.getElementById(id).classList.add('sh'),1500+i*2000)});
+tn(220,3.5,'sine',.03);setTimeout(()=>tn(277,3.5,'sine',.025),400);setTimeout(()=>tn(330,3,'sine',.02),800);setTimeout(()=>tn(440,2.5,'sine',.015),1200)}
+</script>
+</body>
+</html>
